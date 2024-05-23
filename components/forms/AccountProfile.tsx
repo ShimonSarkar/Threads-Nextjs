@@ -77,7 +77,8 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
       image: values.profile_photo,
     });
 
-    redirect("/");
+    console.log("Update successful, redirecting to home.");
+    window.location.href = "/";
   };
 
   const handleImage = (

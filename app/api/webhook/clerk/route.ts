@@ -6,10 +6,8 @@
 // It's a good practice to verify webhooks. Above article shows why we should do it
 import { Webhook, WebhookRequiredHeaders } from "svix";
 import { headers } from "next/headers";
-
-import { IncomingHttpHeaders } from "http";
-
 import { NextResponse } from "next/server";
+import { IncomingHttpHeaders } from "http";
 import {
   addMemberToCommunity,
   createCommunity,
@@ -48,7 +46,7 @@ export const POST = async (request: Request) => {
     return NextResponse.json({ message: "Missing headers" }, { status: 400 });
   }
 
-  const wh = new Webhook(process.env.WEBHOOK_SECRET || "");
+  const wh = new Webhook(process.env.NEXT_CLERK_WEBHOOK_SECRET || "");
 
   let evnt: Event;
 

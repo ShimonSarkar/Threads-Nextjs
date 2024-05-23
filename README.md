@@ -28,4 +28,6 @@ This project serves as a practical exercise in modern web development, focusing 
 
 Feel free to explore the code and experiment with the functionalities. Even better, visit my website, create an account, and start posting threads and joining communities. While there are still features under development, I am actively working on completing them, so stay tuned for updates. This project is a stepping stone towards building more complex applications and aims to solidify fundamental concepts in full-stack development.
 
+[Visit Threads](https://threads-nextjs-mocha.vercel.app/)
+
 ![](demo.png)

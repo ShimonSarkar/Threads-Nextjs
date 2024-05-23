@@ -41,6 +41,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
   const router = useRouter();
   const pathname = usePathname();
   const { startUpload } = useUploadThing("media");
+  var hasImageChanged = false;
 
   const [files, setFiles] = useState<File[]>([]);
 
@@ -57,9 +58,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
   const onSubmit = async (values: z.infer<typeof UserValidation>) => {
     const blob = values.profile_photo;
 
-    const hasImageChanged = isBase64Image(blob);
-    console.log("Image change: ", hasImageChanged);
-    if (hasImageChanged) {
+    if (hasImageChanged && isBase64Image(blob)) {
       const imgRes = await startUpload(files);
 
       // @ts-ignore
@@ -103,6 +102,8 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
 
       fileReader.readAsDataURL(file);
     }
+
+    hasImageChanged = true;
   };
 
   return (

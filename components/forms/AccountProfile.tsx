@@ -55,7 +55,6 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
   });
 
   const onSubmit = async (values: z.infer<typeof UserValidation>) => {
-    console.log("HELLLO!!!!");
     const blob = values.profile_photo;
 
     const hasImageChanged = isBase64Image(blob);
@@ -78,11 +77,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
       image: values.profile_photo,
     });
 
-    if (pathname === "/profile/edit") {
-      router.back();
-    } else {
-      router.push("/");
-    }
+    router.push("/");
   };
 
   const handleImage = (

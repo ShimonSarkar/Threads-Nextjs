@@ -7,6 +7,5 @@ export const config = {
     '/((?!.*\\..*|_next).*)',
     '/',
     '/(api|trpc)(.*)',
-    '/api/webhook/clerk'  // Add your webhook route here
   ],
 };

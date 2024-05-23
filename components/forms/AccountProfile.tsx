@@ -3,7 +3,7 @@
 import * as z from "zod";
 import Image from "next/image";
 import { useForm } from "react-hook-form";
-import { usePathname, useRouter } from "next/navigation";
+import { redirect, usePathname, useRouter } from "next/navigation";
 import { ChangeEvent, useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 
@@ -77,7 +77,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
       image: values.profile_photo,
     });
 
-    router.push("/");
+    redirect("/");
   };
 
   const handleImage = (

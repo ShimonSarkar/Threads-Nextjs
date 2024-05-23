@@ -25,7 +25,13 @@ export default function RootLayout({
       }}
     >
       <html lang="en">
-        <body className={`${inter.className} bg-dark-1`}>
+        <body
+          className={`${inter.className} min-h-screen`}
+          style={{
+            background: "linear-gradient(to right, #857EF7, #6E59D7)",
+            minHeight: "100vh",
+          }}
+        >
           <div className="w-full flex justify-center items-center min-h-screen">
             {children}
           </div>

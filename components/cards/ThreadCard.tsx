@@ -162,7 +162,7 @@ function ThreadCard({
           />
         </Link>
       ) : (
-        <p className="text-subtle-medium text-gray-1">
+        <p className="mt-5 text-subtle-medium text-gray-1">
           {formatDateString(createdAt)}
         </p>
       )}

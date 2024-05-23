@@ -64,7 +64,6 @@ function ThreadCard({
             <Link href={`/profile/${author.id}`} className="w-fit">
               <h4 className="cursor-pointer text-base-semibold text-light-1">
                 {author.name}
-                {community?.name}
               </h4>
             </Link>
 
@@ -145,13 +144,15 @@ function ThreadCard({
         </div>
       )}
 
+      <p className="text-subtle-medium text-gray-1">
+        {formatDateString(createdAt)}
+      </p>
       {!isComment && community && (
         <Link
           href={`/communities/${community.id}`}
           className="mt-5 flex items-center"
         >
           <p className="text-subtle-medium text-gray-1">
-            {formatDateString(createdAt)}
             {community && ` - ${community.name} Community`}
           </p>
 

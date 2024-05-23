@@ -64,6 +64,7 @@ function ThreadCard({
             <Link href={`/profile/${author.id}`} className="w-fit">
               <h4 className="cursor-pointer text-base-semibold text-light-1">
                 {author.name}
+                {community?.name}
               </h4>
             </Link>
 
